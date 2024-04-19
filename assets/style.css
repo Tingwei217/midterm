@@ -1,0 +1,312 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+@import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
+@import url(https://fonts.googleapis.com/earlyaccess/cwtexkai.css);
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ede7e3;
+
+}
+
+nav {
+    background-color: #DED2CB;
+    font-family: Arial;
+    font-size: 20px;
+    text-align: center;
+}
+
+nav a {
+    display: inline-block;
+    padding: 10px 10px;
+    color: white;
+}
+
+nav a:hover {
+    background-color: #E6DED7;
+    color: #A08B80;
+}
+
+main {
+    padding: 30px;
+}
+
+.part1 {
+    float: left;
+    width: 25%;
+}
+
+.photo {
+    border-radius: 50%;
+    height: 72%;
+    width: 72%;
+    margin-left: 80px;
+    margin-top: 20px;
+}
+
+.name {
+    font-family: 'Noto Sans TC', sans-serif !important;
+    font-size: 25pt;
+    font-weight: 900;
+    color: #A08B80;
+    margin-left: 162px;
+    margin-top: 20px;
+}
+
+.aside1 {
+    float: right;
+    width: 70%;
+    color: #A08B80;
+    margin-top: 30px;
+}
+
+.title1 {
+    font-family: 'Impact', 'fantasy';
+    font-size: 25pt;
+    color: #A08B80;
+    font-weight: 600;
+    margin-left: 30px;
+}
+
+.aside1 h1 {
+    font-family: 'cwTeXYen', 'sans-serif';
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 30px;
+    margin-left: 50px;
+}
+
+.aside1 a {
+    margin-top: 30px;
+    margin-left: 50px;
+    margin-right: 20px;
+}
+
+.clearfix {
+    clear: both;
+}
+
+table {
+    width: 95%;
+    margin: auto;
+    padding: 15px;
+}
+
+table th td {
+    width: 50%;
+}
+
+table img {
+    border-radius: 30px;
+    margin: 15px;
+}
+
+.title2 {
+    font-family: 'Impact', 'fantasy';
+    font-size: 25pt;
+    color: #A08B80;
+    text-align: left;
+    margin-left: 30px;
+    font-weight: 600;
+    padding: 10px;
+}
+
+.aside2 {
+    color: #A08B80;
+    float: left;
+    width: 40%;
+    margin-left: 70px;
+}
+
+.aside3 {
+    float: right;
+    color: #A08B80;
+    width: 40%;
+    margin-right: 70px;
+}
+
+
+.title3 {
+    font-family: 'Impact', 'fantasy';
+    color: #A08B80;
+    font-size: 25pt;
+    font-weight: 400;
+    padding: 10px;
+    text-align: center;
+}
+
+.ex {
+    background-color: #E6DED7;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 50px;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.title4 {
+    font-family: 'Impact', 'fantasy';
+    color: #B09483;
+    font-size: 25pt;
+    font-weight: 400;
+    padding: 10px;
+
+}
+
+.context1 {
+    color: #A08B80;
+    font-family: 'cwTeXKai', 'serif';
+    font-size: 20pt;
+    font-weight: 600;
+}
+
+.date1 {
+    color: #A08B80;
+    font-family: 'cwTeXKai', 'serif';
+    font-size: 18pt;
+    font-weight: 700;
+    padding-left: 40px;
+}
+
+.context2 {
+    color: #A08B80;
+    font-family: 'cwTeXKai', 'serif';
+    font-size: 19pt;
+    text-align: center;
+    font-weight: 600;
+}
+
+.text {
+    color: #A08B80;
+    font-family: 'cwTeXYen', 'sans-serif';
+    font-size: 17pt;
+    text-align: justify;
+    font-weight: 500;
+}
+
+.date2 {
+    color: #A08B80;
+    font-family: 'cwTeXKai', 'serif';
+    font-size: 15pt;
+    text-align: left;
+    font-weight: 700;
+    padding-left: 60px;
+}
+
+.date3 {
+    color: #A08B80;
+    font-family: 'cwTeXKai', 'serif';
+    font-size: 15pt;
+    font-weight: 700;
+    text-align: right;
+    margin-right: 30px;
+}
+
+.fix {
+    position: fixed;
+    bottom: 28px;
+    right: -180px;
+}
+
+footer {
+    width: 100%;
+    padding: 15px;
+    background-color: #DED2CB;
+    color: white;
+    text-align: center;
+    font-family: 'Impact', 'fantasy';
+    font-size: 20px;
+}
+
+
+.skills1 {
+    text-align: right;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    color: #A08B80;
+    animation-name: animate-background1;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+
+.skills2 {
+    text-align: right;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    color: #A08B80;
+    animation-name: animate-background2;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+
+.skills3 {
+    text-align: right;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    color: #A08B80;
+    animation-name: animate-background3;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+
+.P90 {
+    width: 0;
+    background-color: #E6DED7;
+    border-radius: 20px;
+}
+
+.P85 {
+    width: 0;
+    background-color: #E6DED7;
+    border-radius: 20px;
+}
+
+.P70 {
+    width: 0;
+    background-color: #E6DED7;
+    border-radius: 20px;
+}
+
+@keyframes animate-background1 {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 90%;
+    }
+}
+
+@keyframes animate-background2 {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 85%;
+    }
+}
+
+@keyframes animate-background3 {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 70%;
+    }
+}
+
+.skill-chart {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #ede7e3;
+    margin: 30px;
+    margin-left: 80px;
+}

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="move.js"></script>
+    <title>個人履歷網頁</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+      <nav>
+        <a href="#scetion1" style="margin-right: 150px; margin-left: 150px;"><h5>ABOUT ME</h5></a>
+        <a href="#section2" style="margin-right: 150px; margin-left: 150px;"><h5>SKILL</h5></a>
+        <a href="#section3" style="margin-right: 150px; margin-left: 150px;"><h5>EXPERIENCE</h5></a>
+      </nav>
+  
+      <main>
+        <article>
+
+            <section id="section1">
+              <div class="part1">
+                  <img src="image/個人照.jpg" class="photo"/>
+                  <div class="name">張庭瑋</div>
+              </div>
+              <aside class="aside1">
+                  <div class="title1">A B O U T &nbsp &nbsp M E</div>
+                  <hr style="margin-right: 30px; border-color: #DED2CB;">
+                  <h1>生日：2004.02.17</h1>
+                  <h1>興趣：聽音樂、唱歌、跳舞</h1>
+                  <h1>科系：工業與系統工程學系</h1>
+                  <h1>Slogan：撐過去就是自己的</h1>
+                  <a href="https://www.instagram.com/tingwei_0217?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><img src="image/IG.png" style="height: 50px; width: 50px;" ></a>
+                  <a href="https://www.facebook.com/profile.php?id=100010932212215" target="_blank"><img src="image/FB.png"  style="height: 53px; width: 53px;"></a>
+                  <a href="mailto:ctwei17@gmail.com"><img src="image/gmail.png"  style="height: 53px; width: 53px;"></a>
+              </aside>
+              </section>
+
+            <div class="clearfix"></div>
+            <hr style="margin: 20px; border-color: #DED2CB;">
+            
+            <section id="section2">
+              <p class="title2">S K I L L</p>
+
+              <aside class="aside2">
+                <table>
+                  <tr>
+                    <td colspan="2">
+                      <p class="title3" >Programming &nbsp &nbsp Skill</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: center;">
+                      C &nbsp 75%
+                      <div class="skill-chart" id="c-chart"></div>
+                    </td>
+                    <td style="text-align: center;">
+                      Python &nbsp 70%
+                      <div class="skill-chart" id="python-chart"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: center;">
+                      HTML &nbsp 65%
+                      <div class="skill-chart" id="html-chart"></div>
+                      
+                    </td>
+                    <td style="text-align: center;">
+                      CSS &nbsp 70%
+                      <div class="skill-chart" id="css-chart"></div>
+                    </td>
+                  </tr>
+                  <script>
+                    const cChart = document.getElementById('c-chart');
+                    const pythonChart = document.getElementById('python-chart');
+                    const htmlChart = document.getElementById('html-chart');
+                    const cssChart = document.getElementById('css-chart');
+          
+                    // 設置初始百分比
+                    let cPercent = 0;
+                    let pythonPercent = 0;
+                    let htmlPercent = 0;
+                    let cssPercent = 0;
+          
+                    // 更新百分比並執行動畫
+                    function updateChart(chart, percent)
+                    {
+                      chart.style.backgroundImage = `conic-gradient(#f0f0f0 ${percent}%, transparent ${percent}%)`;
+                    }
+          
+                    //模擬加載過程
+                    function simulateLoading() 
+                    {
+                      const animationDuration = 3500; //限制3.5秒內完成
+                      const interval = 10; // 更新間隔
+
+                      const totalSteps = animationDuration / interval;
+                      let currentStep = 0;
+
+                      const cTargetPercent = 75;
+                      const pythonTargetPercent = 70;
+                      const htmlTargetPercent = 65;
+                      const cssTargetPercent = 70;
+
+                      const cStep = (cTargetPercent - cPercent) / totalSteps;
+                      const pythonStep = (pythonTargetPercent - pythonPercent) / totalSteps;
+                      const htmlStep = (htmlTargetPercent - htmlPercent) / totalSteps;
+                      const cssStep = (cssTargetPercent - cssPercent) / totalSteps;
+
+                      const animationInterval = setInterval(() =>
+                      {
+                        if (currentStep >= totalSteps) 
+                        {
+                          clearInterval(animationInterval);
+                          return;
+                        }
+
+                        cPercent += cStep;
+                        pythonPercent += pythonStep;
+                        htmlPercent += htmlStep;
+                        cssPercent += cssStep;
+
+                        updateChart(cChart, cPercent);
+                        updateChart(pythonChart, pythonPercent);
+                        updateChart(htmlChart, htmlPercent);
+                        updateChart(cssChart, cssPercent);
+
+                        currentStep++;
+                      }, interval);
+                  }
+                    window.addEventListener('load', simulateLoading);
+                  </script>
+
+                </table>
+              </aside>
+              
+              <aside class="aside3">
+                <table>
+                  <tr>
+                    <td><p class="title3">Language &nbsp &nbsp Skill</p></td>
+                  </tr>
+                  <tr>
+                    <td>
+                        <div style="margin-bottom: 5px;">中文</div>
+                        <div class="skills1 P90">90%</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div style="margin-top: 5px; margin-bottom: 5px;">英文</div>
+                        <div class="skills2 P70">70%</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><p class="title3">Other &nbsp &nbsp Skill</p></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div style="margin-bottom: 5px;">AutoCAD</div>
+                        <div class="skills2 P85">85%</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div style="margin-top: 5px; margin-bottom: 5px;">Word</div>
+                      <div class="skills2 P85">85%</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div style="margin-top: 5px; margin-bottom: 5px;">Excel</div>
+                      <div class="skills3 P70">70%</div>
+                    </td>
+                  </tr>
+                </table>
+              </aside>
+            </section>
+
+
+            <div class="clearfix"></div>
+            <hr style="margin: 20px; border-color: #DED2CB;">
+
+            
+            <p id="section3" class="title2">E X P E R I E N C E</p>
+            <section class="ex">
+              <div class="title4" >E d u c a t i o n a l &nbsp &nbsp L e v e l</div>
+              <table class="context1">
+                <tr>
+                  <td>
+                      <a href="https://www.cycu.edu.tw/" target="_blank">
+                        <img src="image/CYCU.jpg" style="width: 410px; height: 310px;" title="CYCU">
+                      </a>
+                  </td>
+                  <td>
+                    中原大學 — 工業與系統工程學系工程組 <br><br>
+                    <div class="date1">▶ 2022.09 ～ 現今</div>
+                  </td>
+                </tr>
+                <tr> 
+                  <td>
+                    <a href="https://www.cpshs.hcc.edu.tw/home" target="_blank">
+                      <img src="image/CPSH.jpg" style="width: 410px; height: 310px;" title="CPSH">
+                    </a>
+                  </td>
+                  <td>
+                    國立竹北高級中學 — 普通科 <br><br>
+                    <div class="date1">▶ 2019.09 ～ 2022.06</div>
+                  </td>
+                </tr>
+                <tr> 
+                  <td>
+                    <a href="https://www.smjh.hc.edu.tw/nss/p/index" target="_blank">
+                      <img src="image/SMJH.jpg" style="width: 410px; height: 310px;" title="CPSH">
+                    </a>
+                  </td>
+                  <td>
+                    三民國中 <br><br>
+                    <div class="date1">▶ 2016.09 ～ 2019.06</div>
+                  </td>
+                </tr>
+                <tr> 
+                  <td>
+                    <a href="https://www.sctcps.hc.edu.tw/home" target="_blank">
+                      <img src="image/SCTCPS.jpg" style="width: 410px; height: 310px;" title="CPSH">
+                    </a>
+                  </td>
+                  <td>
+                    國立新竹教育大學附設實驗國民小學<br>
+                    <div style="font-size: 14pt;">(現：國立清華大學附設實驗國民小學)</div> <br><br>
+                    <div class="date1">▶ 2010.09 ～ 2016.06</div>
+                  </td>
+                </tr>
+              </table>
+            </section>
+
+            <section class="ex">
+              <div class="title4">A c t i v i e s</div>
+                <table class="context2">
+                  <tr>
+                    <td rowspan="2"><a href="https://www.youtube.com/watch?v=ID8pqN_cVrI" target="_blank" title="智慧登月小車介紹影片"><img src="image/《智慧登月小車》.jpg" style="width: 300x; height: 300px;"></a></td>
+                    <td>計概專題報告 —《智慧登月小車》<br><br>
+                    <div class="date2">▶ 2023.06.01</div> <br>
+                  </td>
+                  </tr>
+                  <tr>
+                    <td class="text">
+                      此專題利用Webduino平台打造一輛智慧化的小車。
+                      透過結合網頁控制和感測器技術，該專題展示如何實現遠程操控、自主導航以及數據收集等功能，
+                      並讓我們更了解現代科技如何應用於探索與學習的領域
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>中原大學熱舞社成果發表會 —《黑暗巴洛克》<br><br>
+                      <div class="date3">▶ 2022.12.29</div> <br>
+                      <div class="text">
+                        上大學後的第一次舞台是因為熱舞社，
+                        這次經歷不僅是舞蹈技巧的提升，更是對團隊合作和舞台表現的了解。
+                        在練習和演出的過程中，我學會了如何與夥伴協調，展現出我們共同的能量和熱情，是一次難忘的體驗。
+                      </div>
+                    </td>
+                    <td><a href="https://youtu.be/s7NUTzxynek?si=x-7eJWz42F_KrsvA" target="_blank" title="成果發表影片"><img src="image/小成.jpg" style="width: 400px; height: 300px;"></a></td>
+                  </tr>
+                  <tr>
+                    <td>中原大學熱舞社成果發表會 —《舞夜十刻》 <br><br>
+                      <div class="date3">▶ 2023.06.01</div> <br>
+                      <div class="text">
+                        上大學後的第二次表演仍然獻給了熱舞社，這次與上次不同的是，我們更加融洽地將舞台表演與學業平衡。
+                        雖然繁忙，但我們通過更有效的組織和分工，成功地克服了挑戰，展現出更加成熟和專業的表演水準。
+                      </div>
+                    </td>
+                    <td><a href="https://youtu.be/sEmkKVFzSyE?si=dTqMK7twhhssJOZo" target="_blank" title="成果發表影片"><img src="image/大成.jpg" style="width: 400px; height: 300px;"></a></td>
+                  </tr>
+                  <tr>
+                    <td><iframe width="476" height="280" src="https://www.youtube.com/embed/L-lVzSX0QjE?si=zU2nRCatsSGcpeNa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="margin-bottom: 10px;"></iframe></a></td>
+                    <td>竹北高中熱舞社成果發表會 —《旧日》<br><br>
+                      <div class="date2">▶ 2020.08.24</div> <br>
+                      <div class="text">
+                        高中時因為對舞蹈很感興趣，因此踏上了跳舞的道路。
+                        雖然每次辛苦的練習讓我汗流浹背，但當能編排一支舞時，成就感油然而生。
+                        這種付出與收穫的感覺，讓我更加有動利繼續向前。
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>科學素養營隊 <br><br>
+                      <div class="date3">▶ 2021.01.21</div> <br>
+                      <div class="text">
+                        高二時很幸遇有機會載班導師的帶領下和班上同學們一起準備一個兩天的國小科學營隊，擔任隊輔是一段充滿成就感的經歷。
+                        透過協助小朋友們探索科學的樂趣，我不僅學到了如何引導他人以及怎麼和小朋友們溝通，更學到了團隊合作的重要性。
+                      </div>
+                    </td>
+                    <td><img src="image/活動.jpg" style="width: 400px; height: 300px;"></td>
+                  </tr>
+                  <tr>
+                    <td><iframe width="476" height="280" src="https://www.youtube.com/embed/bRVgiTaBT2o?si=Ozeppvzvq3jTJ4Kd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></a></td>
+                    <td>竹北高中第28屆畢業歌 —《旅程》<br><br>
+                      <div class="date2">▶ 2022.06.01</div> <br>
+                      <div class="text">
+                        第一次進錄音室是很難忘的經驗！能擔任畢業歌的主唱和朋友們一起製作讓我感到非常的榮幸和有趣，和團隊一起錄製、錄音過程都充滿了挑戰和新鮮感。
+                        這次的經驗中讓我了解到了許多不同的錄音知識，也在過程中有美好的回憶
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+                <hr style="margin: 20px; border-color: white;">
+                <table>
+                  <tr style="text-align: center;">
+                    <td><img src="image/書卷獎狀.jpg" style="width: 300px; height: 400px; border-radius: 0px;"></td>
+                    <td><img src="image/專題獎狀.jpg" style="width: 300px; height: 400px; border-radius: 0px;"></td>
+                  </tr>
+                </table>
+
+            </section>
+        </article>
+  
+      </main>
+
+      <div class="clearfix"></div>
+        <div class="fix">
+          <img src="image/Top button.png" style="height: 30%; width: 30%" onclick="scrollToTop()"  >
+        </div>
+
+        <script>//底部按鈕
+          function scrollToTop()
+          {
+            window.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+            });
+          }
+        </script>
+
+      <footer>
+        @ t i n g w e i _ 2 1 7
+      </footer>
+</body>
+</html>
